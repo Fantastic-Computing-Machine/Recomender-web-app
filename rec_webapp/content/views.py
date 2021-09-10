@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 import os
 import requests
-print('hello world')
+print(os.getenv('x_rapidapi_key'))
 def home_page(request):
 
     print("REQUEST: ", request)
