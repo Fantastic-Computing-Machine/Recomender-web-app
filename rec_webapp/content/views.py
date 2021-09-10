@@ -14,7 +14,7 @@ def home_page(request):
 
     headers = {
         'x-rapidapi-host': "jikan1.p.rapidapi.com",
-        'x-rapidapi-key': os.getenv('X_RAPIDAPI_KEY')
+        'x-rapidapi-key': os.getenv('x_rapidapi_key')
     }
 
     response = requests.request(
