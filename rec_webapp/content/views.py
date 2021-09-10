@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 import os
 import requests
-
+print('hello world')
 def home_page(request):
 
     print("REQUEST: ", request)
@@ -16,7 +16,8 @@ def home_page(request):
         'x-rapidapi-host': "jikan1.p.rapidapi.com",
         'x-rapidapi-key': os.getenv('x_rapidapi_key')
     }
-
+    
+    
     response = requests.request(
         "GET", url, headers=headers, params=querystring)
     return HttpResponse(response.text)
