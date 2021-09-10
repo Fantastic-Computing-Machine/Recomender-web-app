@@ -32,4 +32,4 @@ jobs:
         echo $x_rapidapi_key
         python rec_webapp/manage.py test
       env:
-        x_rapidapi_key: ${{secrets.X_RAPIDAPI_KEY1}}
+        x_rapidapi_key: ${{secrets.X_RAPIDAPI_KEY}}
