@@ -1,9 +1,12 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 import requests
 
 
-def home_page():
+def home_page(request):
+
+    print("REQUEST: ", request)
 
     url = "https://jikan1.p.rapidapi.com/search/anime"
 
@@ -16,4 +19,5 @@ def home_page():
 
     response = requests.request(
         "GET", url, headers=headers, params=querystring)
-    return response.text
+    return HttpResponse(response.text)
+    # return 0
