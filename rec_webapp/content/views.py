@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from dotenv import load_dotenv
 
 import os
 import requests
 
-
+load_dotenv()
 base_url = "https://jikan1.p.rapidapi.com/"
 
 headers = {
